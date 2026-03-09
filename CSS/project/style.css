@@ -1,3 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: black;
+  padding: 20px 10px;
+  color: white;
+}
+
+ul {
+  float: right;
+  list-style: none;
+  margin-top: -20px;
+}
+
+li {
+  float: left;
+  margin-right: 30px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
 h1 {
   background-color: rgb(20, 4, 53);
   color: white;
