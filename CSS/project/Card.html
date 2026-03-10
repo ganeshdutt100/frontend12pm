@@ -4,38 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card</title>
     <style>
-        div {
+        .Card {
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            text-align: center;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+        }
+
+        .image {
+            background-color: lightblue;
+            border-bottom-left-radius: 20px;
+        }
+
+        img {
             width: 200px;
             height: 200px;
-            border: 10px groove red;
-            /* border-width: 15px;
-            border-color: blue;
-            border-style: groove;
+            border-radius: 50%;
+        }
 
+        .text {}
 
-            border-top-color: red;
-            border-top-style: dotted;
-            border-top-width: 5px; */
-
-            /* border-radius: 10px; */
-            /* border-top-left-radius: 20px;
-            border-top-right-radius: 90px;
-            border-bottom-right-radius: 90px;
-            border-bottom-left-radius: 90px; */
-            /* border-radius: 10px 20px 30px 40px; */
-            /* border-radius: 50%; */
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(135, 203, 233);
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur saepe, inventore voluptatibus impedit
-            laboriosam a dignissimos totam fugiat praesentium tenetur provident, magnam quia dicta quas explicabo nemo
-            sunt
-            consequatur? Illo.</p>
+    <div class="Card">
+        <!-- image -->
+        <div class="image">
+            <img src="../../images/img2.png" alt="">
+        </div>
+        <!-- text -->
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti culpa voluptates consequatur
+                aliquid ab maxime, provident beatae pariatur laborum odit asperiores maiores vel repellendus, facere
+                quam, ipsam quasi vitae!</p>
+            <button>Click me </button>
+        </div>
     </div>
 </body>
 
