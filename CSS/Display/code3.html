@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 40px;
+            margin: 10px;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: red;
+        }
+
+        .list {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .list li a {
+            color: white;
+        }
+
+
+        /* heroSection */
+        .heroSection {
+            display: flex;
+            margin: 10px;
+        }
+
+        .text {
+            margin-top: 80px;
+
+        }
+
+        .text p {
+            margin: 10px 0;
+            color: rgb(58, 58, 58);
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">4<span>Achievers</span> </div>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </nav>
+    <!-- heroSection -->
+    <div class="heroSection">
+        <div class="text">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptates, assumenda iure nisi
+                voluptatibus illo, laudantium qui id impedit magnam vitae nihil ullam hic corrupti! Nulla aut vel
+                aperiam ullam.</p>
+            <button>Click me </button>
+        </div>
+        <div class="image">
+            <img src="../../images/img3.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
