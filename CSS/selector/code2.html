@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo Selector</title>
+    <style>
+        .box {
+            width: 300px;
+            height: auto;
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            text-align: center;
+            background-color: lightblue;
+            padding: 20px;
+            transition: .5s;
+        }
+
+        .box:hover {
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.342);
+            background-color: lightpink;
+
+        }
+
+        a:active {
+            color: chocolate;
+        }
+
+        input:focus {
+            background-color: red;
+
+            color: white;
+        }
+
+        /* 
+        li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        li:nth-child(even) {
+            background-color: rgb(240, 249, 252);
+        } */
+        /* li:nth-of-type(3n) {
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 20px;
+            list-style: none;
+        } */
+        li:first-child {
+            color: red;
+        }
+
+        li:last-child {
+            color: red;
+        }
+
+        li:not(.useNot) {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">flipkart</a>
+    <input type="text">
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam quis sed amet pariatur distinctio
+            laudantium numquam eos aspernatur illo natus?</p>
+    </div>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li class="useNot">Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+</body>
+
+</html>
