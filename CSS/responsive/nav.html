@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            padding: 20px;
+
+        }
+
+        .list {
+            display: none;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .heroSection {
+            display: flex;
+            gap: 20px;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .text {}
+
+        .image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+
+
+        @media only screen and (min-width:700px) {
+            .list {
+                display: flex;
+            }
+
+            .icon {
+                display: none;
+            }
+
+            .heroSection {
+                flex-direction: row;
+                text-align: start;
+            }
+
+            .image img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">LOGO</div>
+        <ul class="list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+        <div class="icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <!-- heroSection -->
+    <div class="heroSection">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat veniam mollitia provident corporis
+                incidunt porro dicta, beatae, modi at quibusdam aut nemo velit culpa quis quisquam fugit cum in minima.
+            </p>
+            <button>Click me </button>
+        </div>
+        <div class="image">
+            <img src="/images/img2.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
