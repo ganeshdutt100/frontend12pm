@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Shiv Kumar Sharma Ji | Amar Smriti</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --clay: #8b4513;
+            --dark-bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Lora', serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Ambient Background Light */
+        .ambient-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            z-index: -1;
+            transition: all 2s ease;
+        }
+
+        body.lit .ambient-glow {
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 75%);
+            width: 800px;
+            height: 800px;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* KEY CHANGE 1: Container size adjusted for better framing */
+        .profile-frame {
+            position: relative;
+            width: 240px;
+            /* Thoda bada size perfect lagta hai */
+            height: 240px;
+            margin-bottom: 30px;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* KEY CHANGE 2: Image ko contained rakha hai taaki cut-off na ho */
+            object-fit: cover;
+            /* KEY CHANGE 3: Focus ko photo ke 'top' par rakha hai (sir par) */
+            object-position: top;
+            border: 2px solid var(--gold);
+            padding: 8px;
+            /* Frame ke andar thoda space */
+            background: rgba(0, 0, 0, 0.4);
+            /* Soft background contrast */
+            filter: sepia(0.3) contrast(1.1);
+            transition: 1s ease;
+        }
+
+        .profile-frame:hover img {
+            filter: sepia(0);
+            transform: scale(1.03);
+        }
+
+        h1 {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: var(--gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .dates {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+
+        /* Interactive Diya Ritual */
+        .diya-container {
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .diya-svg {
+            width: 140px;
+            height: auto;
+        }
+
+        #flame {
+            fill: url(#flameGrad);
+            display: none;
+            transform-origin: center bottom;
+            animation: flicker 0.1s infinite alternate;
+            filter: blur(0.5px);
+        }
+
+        @keyframes flicker {
+            0% {
+                transform: scale(1) rotate(-1deg);
+            }
+
+            100% {
+                transform: scale(1.1) rotate(1deg);
+                opacity: 0.8;
+            }
+        }
+
+        .click-hint {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Main Content Cards */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            margin-top: -50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .event-item h3 {
+            color: var(--gold);
+            font-family: 'Tiro Devanagari Hindi';
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+        }
+
+        /* Floating Petals */
+        .petal {
+            position: fixed;
+            top: -10%;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-style: italic;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div class="ambient-glow"></div>
+
+    <header>
+        <div class="profile-frame">
+            <img src="Gemini_Generated_Image_29r0i229r0i229r0.png" alt="Shiv Kumar Sharma Ji">
+        </div>
+
+        <p style="font-style: italic; opacity: 0.6; margin-bottom: 10px;">।। ॐ शांति ।।</p>
+        <h1>स्व. श्री शिव कुमार शर्मा जी</h1>
+        <p class="dates">1943 — 2025</p>
+
+        <div class="diya-container" onclick="performRitual()">
+            <svg class="diya-svg" viewBox="0 0 100 80">
+                <defs>
+                    <radialGradient id="flameGrad">
+                        <stop offset="0%" stop-color="#fff" />
+                        <stop offset="30%" stop-color="#ffd700" />
+                        <stop offset="100%" stop-color="#ff4500" />
+                    </radialGradient>
+                </defs>
+                <path d="M10,45 Q10,75 50,75 Q90,75 90,45 Q90,35 50,35 Q10,35 10,45" fill="#5D2E0A" />
+                <path d="M15,45 Q15,65 50,65 Q85,65 85,45 Q85,40 50,40 Q15,40 15,45" fill="#8B4513" />
+                <rect x="48" y="28" width="4" height="12" fill="#222" rx="2" />
+                <path id="flame" d="M50,0 Q62,20 50,32 Q38,20 50,0" />
+            </svg>
+            <p id="hint" class="click-hint">श्रद्धांजलि के लिए दीप जलाएं</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="glass-card">
+            <h2 style="font-family: 'Tiro Devanagari Hindi'; text-align: center; color: var(--gold);">प्रथम पुण्यतिथि
+                एवं विशाल भंडारा</h2>
+            <p style="text-align: center; margin-top: 10px; line-height: 1.6;">
+                परम पूज्य दादा जी की प्रथम पुण्यतिथि के पावन अवसर पर उनके प्रति श्रद्धा सुमन अर्पित करने हेतु आप सादर
+                आमंत्रित हैं।
+            </p>
+
+            <div class="event-grid">
+                <div class="event-item">
+                    <h3>दिनांक और समय</h3>
+                    <p>3 अप्रैल 2026, शुक्रवार</p>
+                    <p>प्रातः 11:00 बजे से हरि इच्छा तक</p>
+                </div>
+                <div class="event-item">
+                    <h3>स्थान</h3>
+                    <p>निज निवास, ग्राम सेल खेड़ा</p>
+                    <p>तहसील: [Tehsil Name]</p>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                <p style="font-style: italic; font-size: 1.1rem;">"आपकी यादें हमारे दिलों में सदा जीवित रहेंगी।"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>सादर निमंत्रण: समस्त शर्मा परिवार</p>
+        <p style="margin-top: 10px; font-size: 0.7rem;">Created with love by [Your Name]</p>
+    </footer>
+
+    <script>
+        function performRitual() {
+            const flame = document.getElementById('flame');
+            const hint = document.getElementById('hint');
+            const body = document.getElementById('body');
+
+            // Light the Diya
+            flame.style.display = 'block';
+            hint.innerHTML = "श्रद्धा सुमन अर्पित 🙏";
+            hint.style.animation = "none";
+            body.classList.add('lit');
+
+            // Trigger Flower Fall (Pushp Varsha)
+            let count = 0;
+            const interval = setInterval(() => {
+                createPetal();
+                count++;
+                if (count > 40) clearInterval(interval);
+            }, 150);
+        }
+
+        function createPetal() {
+            const petals = ['🌸', '🌼', '✨', '🌹'];
+            const p = document.createElement('div');
+            p.className = 'petal';
+            p.innerHTML = petals[Math.floor(Math.random() * petals.length)];
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            p.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            p.style.opacity = Math.random();
+            document.body.appendChild(p);
+
+            setTimeout(() => p.remove(), 5000);
+        }
+    </script>
+</body>
+
+</html>
