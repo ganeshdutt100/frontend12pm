@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code2</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-image: url('http://templates.thememodern.com/architect/images/Project/5.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: box 10s linear infinite alternate;
+        }
+
+        h1 {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.194);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        @keyframes box {
+
+            0% {
+                background-image: url('http://templates.thememodern.com/architect/images/Project/5.jpg');
+            }
+
+            20% {
+                background-image: url('/images/img1.png');
+            }
+
+            50% {
+                background-image: url('/images/img2.png');
+            }
+
+            100% {
+                background-image: url('/images/img3.jpg');
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    </div>
+</body>
+
+</html>
