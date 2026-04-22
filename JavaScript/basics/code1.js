@@ -9,8 +9,8 @@ console.log(c);
 // 1  = 67❌
 
 // String
-a = "String";
-console.log(a);
+// a = "String";
+// console.log(a);
 
 // Symbol
 b = Symbol("Symbol");
