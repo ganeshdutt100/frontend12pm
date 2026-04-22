@@ -2,6 +2,17 @@ console.log("Code - 3");
 
 let a = 8;
 let b = 2;
+let c = "8";
+
+// result = a == b;
+// result = a > b;
+// result = a < b;
+// result = a != b;
+// result = a >= b;
+// result = a <= b;
+// result = a === c;
+// console.log(result);
+
 // result = a + b;
 // result = a - b;
 // result = a * b;
