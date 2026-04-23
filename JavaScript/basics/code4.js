@@ -31,10 +31,17 @@ console.log("code4");
 // console.log(a > b || a == b);
 // console.log(!(a != b));
 
-let a = 5;
-a += 10;
+// let a = 5;
+// a += 10;
 // a -= 10;
 // a *= 10;
 // a /= 10;
 // console.log(a);
 // a = a+10
+
+// let a = 7;
+
+// (condition)?true :false
+
+// let result = a % 2 == 0 ? "Even" : "Odd";
+// console.log(result);
