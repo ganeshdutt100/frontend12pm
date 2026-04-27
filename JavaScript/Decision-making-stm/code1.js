@@ -26,3 +26,28 @@
 // } else {
 //   console.log("fail");
 // }
+
+// nested if else
+
+// if (condition) {
+//   if (condition) {
+//     // stm
+//   } else {
+//     // stm
+//   }
+// } else {
+//   // stm
+// }
+
+let username = "admin";
+let password = "Admin@123";
+
+if (username === "admin") {
+  if (password === "Admin@123") {
+    console.log("login success");
+  } else {
+    console.log("invalid password");
+  }
+} else {
+  console.log("user not found");
+}
