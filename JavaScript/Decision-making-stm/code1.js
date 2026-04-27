@@ -39,15 +39,15 @@
 //   // stm
 // }
 
-let username = "admin";
-let password = "Admin@123";
+// let username = "admin";
+// let password = "Admin@123";
 
-if (username === "admin") {
-  if (password === "Admin@123") {
-    console.log("login success");
-  } else {
-    console.log("invalid password");
-  }
-} else {
-  console.log("user not found");
-}
+// if (username === "admin") {
+//   if (password === "Admin@123") {
+//     console.log("login success");
+//   } else {
+//     console.log("invalid password");
+//   }
+// } else {
+//   console.log("user not found");
+// }
