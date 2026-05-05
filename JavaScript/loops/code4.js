@@ -21,14 +21,14 @@
 // Palindrome
 // 121 = 121
 
-let num = 122;
-let temp = num;
-let rev = 0;
+// let num = 122;
+// let temp = num;
+// let rev = 0;
 
-while (temp > 0) {
-  let digit = temp % 10;
-  rev = rev * 10 + digit;
-  temp = Math.floor(temp / 10);
-}
+// while (temp > 0) {
+//   let digit = temp % 10;
+//   rev = rev * 10 + digit;
+//   temp = Math.floor(temp / 10);
+// }
 
-console.log(rev == num ? "Palindrome" : "not palindrome");
+// console.log(rev == num ? "Palindrome" : "not palindrome");

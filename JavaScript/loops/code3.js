@@ -23,3 +23,10 @@ let arr = [12, 34, 56, 78, 98];
 // for (let x in person) {
 //   console.log(x, person[x]);
 // }
+
+// Nested Loop
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j <= 5; j++) {
+    console.log(i + " " + j);
+  }
+}
