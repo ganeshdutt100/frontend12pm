@@ -4,17 +4,31 @@
 // 5 = 125
 // 3= 27
 
-let num = 153;
+// let num = 153;
+// let temp = num;
+// let sum = 0;
+
+// while (temp > 0) {
+//   let digit = temp % 10;
+//   sum += digit ** 3;
+//   temp = Math.floor(temp / 10);
+// }
+// if (sum == num) {
+//   console.log("Armstrong number");
+// } else {
+//   console.log("not ARmstrong number ");
+// }
+// Palindrome
+// 121 = 121
+
+let num = 122;
 let temp = num;
-let sum = 0;
+let rev = 0;
 
 while (temp > 0) {
   let digit = temp % 10;
-  sum += digit ** 3;
+  rev = rev * 10 + digit;
   temp = Math.floor(temp / 10);
 }
-if (sum == num) {
-  console.log("Armstrong number");
-} else {
-  console.log("not ARmstrong number ");
-}
+
+console.log(rev == num ? "Palindrome" : "not palindrome");
