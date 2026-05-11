@@ -39,12 +39,45 @@
             display: none;
         }
 
+        #sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100%;
+            background-color: lightblue;
+            transition: .5s;
+        }
+
+        #sidebar.active {
+            right: 0;
+
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(18, 14, 54);
+            color: white;
+            padding: 10px;
+        }
+
+        .mobileList {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            gap: 10px;
+        }
+
         /* .bar {
             display: none;
         } */
-        .active {
+        /* .active {
             display: none;
-        }
+        } */
 
         @media screen and (max-width: 568px) {
             .list {
@@ -71,9 +104,10 @@
 
 
     </nav>
-
-    <aside id="sidebar" class="active">
+    <div class="overlay" id="overlay"></div>
+    <aside id="sidebar">
         <div class="sidebar-header">
+            <div class="logo">logo</div>
             <button id="closeBtn">✕</button>
 
         </div>
@@ -89,8 +123,11 @@
         const closeBtn = document.getElementById('closeBtn')
         const sidebar = document.getElementById('sidebar')
 
-        menuBtn = () => {
+        menuBtn.onclick = () => {
             sidebar.classList.add('active')
+        }
+        closeBtn.onclick = () => {
+            sidebar.classList.remove('active')
         }
 
 
