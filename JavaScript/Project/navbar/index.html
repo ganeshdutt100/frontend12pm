@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(18, 14, 54);
+            color: white;
+            padding: 10px;
+            align-items: center;
+            font-family: sans-serif;
+
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .list {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 20px;
+            display: none;
+        }
+
+        /* .bar {
+            display: none;
+        } */
+        .active {
+            display: none;
+        }
+
+        @media screen and (max-width: 568px) {
+            .list {
+                display: none;
+            }
+
+            button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">logo</div>
+        <ul class="list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+        <button id="menuBtn">≣</button>
+
+
+    </nav>
+
+    <aside id="sidebar" class="active">
+        <div class="sidebar-header">
+            <button id="closeBtn">✕</button>
+
+        </div>
+        <ul class="mobileList">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+    </aside>
+    <script>
+        const menuBtn = document.getElementById('menuBtn')
+        const closeBtn = document.getElementById('closeBtn')
+        const sidebar = document.getElementById('sidebar')
+
+        menuBtn = () => {
+            sidebar.classList.add('active')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

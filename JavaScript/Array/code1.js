@@ -22,7 +22,7 @@
 // methods
 
 // mutator
-let arr = ["grapes", "kiwi", "apple", "kiwi", "banana", "mango", "kiwi"];
+// let arr = ["grapes", "kiwi", "apple", "kiwi", "banana", "mango", "kiwi"];
 // let numArr = [12, 34, 56, 78, 98];
 // let mixedArr = arr.concat(numArr);
 // let result = arr.includes("kiwi");
@@ -31,9 +31,9 @@ let arr = ["grapes", "kiwi", "apple", "kiwi", "banana", "mango", "kiwi"];
 // let result = arr.lastIndexOf("kiwi");
 // let result = arr.join("/");
 // let result = arr.slice(1, 5);
-let result = arr.toString();
+// let result = arr.toString();
 
-console.log(result);
+// console.log(result);
 // fill(value, start , end(n-1) )
 // arr.fill("javaScript", 1, 3);
 // arr.pop();
