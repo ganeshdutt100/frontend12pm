@@ -1,5 +1,5 @@
 // Iteration Methods
-let a = [12, 13, 14, 15, 16];
+// let a = [12, 13, 14, 15, 16];
 // for (let x of a.entries()) {
 //   console.log(x);
 // }
@@ -24,6 +24,9 @@ let a = [12, 13, 14, 15, 16];
 // for (let value of a.values()) {
 //   console.log(value);
 // }
-for (let key of a.keys()) {
-  console.log(key);
-}
+// for (let key of a.keys()) {
+//   console.log(key);
+// }
+
+// let newArray = Array.of("apple", "banana", "orange");
+// console.log(newArray);
