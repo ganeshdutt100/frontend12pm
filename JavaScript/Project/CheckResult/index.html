@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Result </title>
+</head>
+
+<body>
+    <pre>
+    <input type="number" id="m1">
+    <input type="number" id="m2">
+    <input type="number" id="m3">
+    <button onclick="calculate()" >Get Result</button>
+
+    <div id="displayArea">
+
+    </div>
+   </pre>
+
+    <script>
+        function calculate() {
+            let marks = [
+                Number(document.getElementById('m1').value),
+                Number(document.getElementById('m2').value),
+                Number(document.getElementById('m3').value),
+            ]
+
+            let total = 0
+            let display = document.getElementById('displayArea')
+            display.innerHTML = ''
+
+            for (let x of marks) {
+                total += x
+            }
+
+            let percentage = (total / 300) * 100;
+            let status = ''
+            let colorClass = ''
+
+
+            if (percentage >= 40) {
+                status = "Pass✔️"
+            } else {
+                status = "FAIL❌"
+            }
+
+            // display.className = ''
+            display.innerHTML = `
+            <p>Total Marks: ${total}</p>
+            <p>Percentage: ${percentage + '%'}</p>
+            <p>Status : ${status}</p>
+            `
+        }
+    </script>
+</body>
+
+</html>
