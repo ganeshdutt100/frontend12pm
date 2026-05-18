@@ -35,3 +35,16 @@
 // console.log(person.name);
 
 // console.log(person);
+// let sum = {
+//   num1: 12,
+//   num2: 34,
+//   add: function () {
+//     return this.num1 + this.num2;
+//   },
+// };
+// console.log(sum.add());
+
+// const course = { title: "course", frontend: "12345", backend: "23456" };
+
+// const { title, frontend, backend } = course;
+// console.log(title, frontend, backend);
