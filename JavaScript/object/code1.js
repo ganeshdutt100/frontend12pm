@@ -48,3 +48,31 @@
 
 // const { title, frontend, backend } = course;
 // console.log(title, frontend, backend);
+
+// let obj1 = {
+//   name: "priya",
+//   age: 23,
+//   course: "fs",
+//   address: "Delhi",
+// };
+// let obj2 = {
+//   name: "divya",
+//   age: 24,
+//   course: "backend",
+// };
+// let finalResult = { ...obj1, ...obj2 };
+// console.log(finalResult);
+
+// let obj1 = {
+//   name: "priya",
+//   age: 23,
+//   course: "fs",
+//   address: "Delhi",
+// };
+
+// let obj2 = {
+//   ...obj1,
+//   number: 87654378,
+//   testMarks: 87,
+// };
+// console.log(obj2);
