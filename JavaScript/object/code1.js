@@ -76,3 +76,12 @@
 //   testMarks: 87,
 // };
 // console.log(obj2);
+
+let obj1 = {
+  name: "priya",
+  age: 23,
+  course: "fs",
+  address: "Delhi",
+};
+console.log(Object.keys(obj1));
+console.log(Object.values(obj1));
