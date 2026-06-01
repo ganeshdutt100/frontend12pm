@@ -1,0 +1,19 @@
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(10);
+  }, 1000);
+})
+  .then((result) => {
+    console.log(result);
+    return result * 2;
+  })
+  .then((result) => {
+    console.log(result);
+    return result * 3;
+  })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch(() => {
+    console.log("An error occurred");
+  });
