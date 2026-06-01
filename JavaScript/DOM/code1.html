@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="message" class="demo">Good Morning </p>
+    <button id="btn">click me </button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            // document.getElementById('message').textContent = 'Good Evening';
+            document.querySelector('.demo').innerHTML = '<h1><b>Good Evening</b></h1>';
+            document.getElementById('message').style.color = 'red';
+        })
+
+
+    </script>
+
+</body>
+
+</html>
